@@ -50,7 +50,7 @@ read_chronicle <- function(years) {
 #' @return A data frame of events from a single year as listed in the chronicle,
 #'    consisting of columns for date, location, bundesland, category, summary and source.
 read_chronicle_year <- function(year) {
-  if (!(year %in% c(2015, 2016))) stop("Data can only be retrieved for the years 2015 and 2016")
+  #if (!(year %in% c(2015, 2016))) stop("Data can only be retrieved for the years 2015 and 2016")
   base_page <- paste0("https://mut-gegen-rechte-gewalt.de/service/chronik-vorfaelle?&&field_date_value[value][year]=", year,"&page=0")
   chronicle <- read_html(base_page)
 
